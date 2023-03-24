@@ -1,0 +1,56 @@
+<form>
+  <fieldset>
+    <legend>Crear producto</legend>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">Nombre</label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Ingresa nombre">
+    </div>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">Cantidad</label>
+      <input type="number" id="disabledTextInput" class="form-control" placeholder="Ingresa cantidad">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+        placeholder="Ingresa descripcion"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="disabledSelect" class="form-label">Tipo</label>
+      <select id="disabledSelect" class="form-select">
+        <option *ngFor="let typeProduct of typeProducts">
+          {{typeProduct.name}}
+        </option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck">
+        <label class="form-check-label" for="disabledFieldsetCheck">
+          Activo
+        </label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          5% de descuento
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+          10% de descuento
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+          15% de descuento
+        </label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Crear</button>
+  </fieldset>
+</form>
